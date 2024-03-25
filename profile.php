@@ -20,9 +20,12 @@
     <div class="container" style="max-width: 800px;">
         <h1 class="h3 my-3">Profile</h1>
 
-         <?php if(file_exists("_action/photos/profile.jpg")):?>
-            <img src="_actions/photos/profile.jpg" width="300" class="img-thumbnail">
+        <?php if(file_exists("_action/photos/profile.jpg")):?>
+
+            <img src="_actions/photos/profile.jpg" width="300" class="img-thumbnail" >
+
         <?php endif ?>
+
         <form action="_actions/upload.php" method="post"
             enctype="multipart/form-data" class="input-group my-3">
             <input type="file" class="form-control" name="photo">
@@ -35,7 +38,7 @@
             <li class="list-group-item">Phone: 1234</li>
             <li class="list-group-item">Address: abc</li>
         </ul>
-        <a href="_action/logout.php" class="text-danger"></a>
+        <a href="_actions\logout.php" class="text-danger">Logout</a>
     </div>
 </body>
 </html>
