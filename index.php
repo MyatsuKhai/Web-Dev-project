@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css\bootstrap.min.css">
 </head>
 <body>
-    <div class="container text-center" style ="max-width:600px;">
+    <div class="container text-center" style ="max-width:400px;">
         <h1 class="h3 my-3">Login</h1>
         <?php if (isset($_GET['incorrect'])):?>
             <div class="alert alert-warning">
@@ -20,7 +20,7 @@
             placeholder="Email" required>
             <input type="password" name="password" class="form-control mb-2"
             placeholder="Password" required>
-            <button class="btn btn-primary w-160">Login</button>
+            <button class="btn btn-primary w-160 my-3">Login</button>
         </form>
         
     </div>
