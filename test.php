@@ -3,16 +3,32 @@
 include("vendor/autoload.php");
 
 use Libs\Database\MySQL;
+use Libs\Database\UsersTable;
 
 $mysql = new MySQL;
-$db = $mysql->connect();
+$table = new UsersTable($mysql);
 
-$result = $db->query("SELECT * FROM roles");
+$id = $table->insert([
+    "name" => "Alice",
+    "email" => "alice@gmail.com",
+    "phone" => "1234",
+    "address" => "some Address",
+    "password" => "password",
+]);
 
-print_r($result->fetchAll());
+echo $id;
+
+
+
+//$mysql = new MySQL;
+// $db = $mysql->connect();
+
+// $result = $db->query("SELECT * FROM roles");
+
+// print_r($result->fetchAll());
 
 //use Helpers\HTTP;
-use Helpers\Auth;
+//use Helpers\Auth;
 
 
 //$user =Auth::check();
